@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
 RUN git clone https://github.com/aliudvidere/VideoStream.git .
 
 RUN pip3 install -r requirements.txt
